@@ -1,6 +1,7 @@
 # This script greets the user and asks whether they have pushed any commits to Github
 
-import csv
+import csv 
+from datetime import datetime
 
 print('Good evening Manraj!')
 
@@ -19,4 +20,4 @@ while True:
         print('Try again!')
 
 with open("file.txt", "a") as file:
-    file.write(msg + "\n")
+    file.write(msg + ", " + datetime.now().strftime("%d/%m/%Y, %H:%M:%S") + "\n")
